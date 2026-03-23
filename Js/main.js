@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Función para traer noticias desde el JSON (usando Fetch, ¡es la forma más moderna!)
 function cargarNoticias() {
-    fetch('../data/noticias.json')
+    fetch('data/noticias.json')
         .then(res => res.json())
         .then(data => {
             const div = document.getElementById('noticias-ajax');
