@@ -1,34 +1,34 @@
 /**
- * ECOTECH SOLUTIONS - El cerebro de la operación
- * Aquí está toda la magia para que la página no sea fome y funcione de una
+ * ECOTECH SOLUTIONS - Operación principal
+ * Aquí está toda la magia para que la página se llamativa y funcione bien
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Cargamos las noticias apenas abra la página, al tiro
+    // 1. Cargamos las noticias apenas cargue la página
     if (document.getElementById('noticias-ajax')) cargarNoticias();
 
     // 2. Si estamos en la galería, armamos las fotos dinámicamente
     if (document.getElementById('contenedor-fotos')) generarGaleria();
 
-    // 3. El calculador de presupuesto para que el cliente sepa cuánto le sale la pega
+    // 3. El calculador de presupuesto para que el cliente sepa cuánto le cuesta el servicio
     if (document.getElementById('form-presupuesto')) {
         const form = document.getElementById('form-presupuesto');
-        // Escuchamos cualquier cambio en el formulario para actualizar el total al instante
+        // Escuchamos cualquier cambio en el formulario para actualizar el total de inmediato
         form.addEventListener('input', calcularPresupuesto);
         validarCampos();
     }
 
-    // 4. El mapa para que no se pierdan buscando la oficina
+    // 4. El mapa para que no se confundan buscando la oficina
     if (document.getElementById('mapa')) initMapa();
 });
 
-// Función para traer noticias desde el JSON (usando Fetch, ¡es la forma más moderna!)
+// Función para traer noticias desde el JSON (usando Fetch)
 function cargarNoticias() {
     fetch('../data/noticias.json')
         .then(res => res.json())
         .then(data => {
             const div = document.getElementById('noticias-ajax');
-            // Mapeamos los datos para que queden bonitos en el HTML
+            // Mapeamos los datos para que se vean bien en el HTML
             div.innerHTML = data.map(n => `
                 <article class="noticia-item">
                     <h3>${n.titulo}</h3>
@@ -46,14 +46,14 @@ function cargarNoticias() {
         });
 }
 
-// Armamos la galería con puros objetos JS, para que sea bacán y fácil de cambiar
+// Armamos la galería con puros objetos JS, para que sea fácil de cambiar
 function generarGaleria() {
     const contenedor = document.getElementById('contenedor-fotos');
     if (!contenedor) return;
 
     const imagenes = [
         { url: '../img/energia01.jpg', desc: 'Paneles Solares Pro' },
-        { url: '../img/consultoria01.jpg', desc: 'Reunión de Pega' },
+        { url: '../img/consultoria01.jpg', desc: 'Reunión de Trabajo' },
         { url: '../img/oficina01.jpg', desc: 'Nuestra Oficina Eco' },
         { url: '../img/equipo01.jpg', desc: 'El equipo dándolo todo' }
     ];
@@ -112,7 +112,7 @@ function validarCampos() {
     if (inputApellidos) inputApellidos.addEventListener('blur', validarTexto);
 }
 
-// Inicializamos el mapa con Leaflet para que la ubicación quede filete
+// Inicializamos el mapa con Leaflet para que la ubicación quede clara
 let map;
 function initMapa() {
     const mapContainer = document.getElementById('mapa');
@@ -146,7 +146,7 @@ function calcularRutaCliente() {
             const ruta = L.polyline([userCoords, hqCoords], {color: 'green', weight: 5}).addTo(map);
             map.fitBounds(ruta.getBounds());
 
-            alert("¡Bacán! Ruta trazada desde tu ubicación.");
+            alert("¡Excelente! Ruta trazada desde tu ubicación.");
         }, () => {
             alert("No pudimos obtener tu ubicación actual.");
         });
