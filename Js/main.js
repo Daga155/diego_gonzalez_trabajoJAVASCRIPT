@@ -1,16 +1,16 @@
 /**
- * ECOTECH SOLUTIONS - El cerebro de la operación
- * Aquí está toda la magia para que la página no sea fome y funcione de una
+ * ECOTECH SOLUTIONS - Operación principal
+ * Aquí está toda la magia para que la página sea llamativa y funcione bien
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Cargamos las noticias apenas abra la página, al tiro
+    // 1. Cargamos las noticias apenas abra la página, de inmediato
     if (document.getElementById('noticias-ajax')) cargarNoticias();
 
     // 2. Si estamos en la galería, armamos las fotos dinámicamente
     if (document.getElementById('contenedor-fotos')) generarGaleria();
 
-    // 3. El calculador de presupuesto para que el cliente sepa cuánto le sale la pega
+    // 3. El calculador de presupuesto para que el cliente sepa cuánto le sale el trabajo
     if (document.getElementById('form-presupuesto')) {
         const form = document.getElementById('form-presupuesto');
         // Escuchamos cualquier cambio en el formulario para actualizar el total al instante
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('mapa')) initMapa();
 });
 
-// Función para traer noticias desde el JSON (usando Fetch, ¡es la forma más moderna!)
+// Función para traer noticias desde el JSON (usando Fetch)
 function cargarNoticias() {
     fetch('data/noticias.json')
         .then(res => res.json())
@@ -46,7 +46,7 @@ function cargarNoticias() {
         });
 }
 
-// Armamos la galería con puros objetos JS, para que sea bacán y fácil de cambiar
+// Armamos la galería con puros objetos JS, para que sea fácil de cambiar
 function generarGaleria() {
     const contenedor = document.getElementById('contenedor-fotos');
     if (!contenedor) return;
@@ -146,7 +146,7 @@ function calcularRutaCliente() {
             const ruta = L.polyline([userCoords, hqCoords], {color: 'green', weight: 5}).addTo(map);
             map.fitBounds(ruta.getBounds());
 
-            alert("¡Bacán! Ruta trazada desde tu ubicación.");
+            alert("¡Excelente! Ruta trazada desde tu ubicación.");
         }, () => {
             alert("No pudimos obtener tu ubicación actual.");
         });
