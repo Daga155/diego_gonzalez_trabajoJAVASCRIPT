@@ -1,5 +1,5 @@
 /* ESTILOS GLOBALES - ECOTECH SOLUTIONS
-   Aquí definimos los colores y la base para que la página se vea bacán y profesional 
+   Aquí definimos los colores y la base para que la página se vea bien y profesional 
 */
 
 :root {
@@ -96,7 +96,7 @@ h2 {
 }
 
 /* DISEÑO EN CUADRÍCULA (Grid)
-   Para que los servicios y la galería se ordenen solitos 
+   Para que los servicios y la galería se ordenen solos
 */
 .grid-servicios, .grid-galeria {
     display: grid;
@@ -114,7 +114,7 @@ h2 {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Un pequeño efecto para que no sea una página fome */
+    transform: translateY(-5px); /* Un pequeño efecto para mejorar la página */
 }
 
 .foto-item img {
@@ -126,7 +126,7 @@ h2 {
 }
 
 /* FORMULARIOS Y PRESUPUESTO
-   Estilos para que el cálculo de la pega se vea clarito 
+   Estilos para que el cálculo del servicio se vea claro 
 */
 fieldset {
     border: 1px solid #ccc;
