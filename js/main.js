@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
  * Función para traer noticias desde el JSON externo usando Fetch API
  */
 function cargarNoticias() {
-    // Detectamos si estamos en la raíz o en la subcarpeta 'views' para la ruta del JSON
-    const esRaiz = !window.location.pathname.includes('views');
+    // Detectamos si estamos en la raíz o en la subcarpeta 'data' para la ruta del JSON
+    const esRaiz = !window.location.pathname.includes('data');
     const rutaJson = esRaiz ? 'data/noticias.json' : '../data/noticias.json';
 
     fetch(rutaJson)
