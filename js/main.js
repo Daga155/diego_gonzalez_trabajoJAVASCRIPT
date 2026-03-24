@@ -71,11 +71,11 @@ function generarGaleria() {
         { url: '../images/equipo01.jpg', desc: 'Nuestra Gente' }
     ];
 
-    // Inyectamos las imágenes con un fallback por si no existen localmente
-    contenedor.innerHTML = imagenes.map(img => `
+    // Inyectamos las imágenes con un fallback por si no existen localmente--aqui
+    contenedor.innerHTML = imagenes.map(images => `
         <div class="foto-item">
-            <img src="${img.url}" alt="${img.desc}" onerror="this.src='https://via.placeholder.com/400x300?text=EcoTech+Solutions'">
-            <p>${img.desc}</p>
+            <img src="${images.url}" alt="${images.desc}" onerror="this.src='https://via.placeholder.com/400x300?text=EcoTech+Solutions'">
+            <p>${images.desc}</p>
         </div>`).join('');
 }
 
