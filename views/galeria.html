@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | EcoTech Solutions</title>
+    <!-- Salimos de 'views' para buscar el estilo global -->
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>EcoTech</strong> Solutions</div>
+            <ul>
+                <!-- El Inicio está un nivel arriba (..) -->
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="galeria-seccion">
+            <h2>Nuestra Galería Dinámica</h2>
+            <p>Echa un vistazo a nuestros proyectos verdes. Estas fotos se cargan directo desde la lógica de JavaScript.</p>
+            
+            <!-- El contenedor que el JS llenará al tiro -->
+            <div id="contenedor-fotos" class="grid-galeria">
+                <p>Cargando imágenes...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Redes Sociales</h3>
+                <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+            </div>
+            <div>
+                <h3>Dirección</h3>
+                <p>Calle de la Innovación 42, Madrid</p>
+            </div>
+            <div>
+                <h3>Información Legal</h3>
+                <a href="#">Aviso Legal</a> | <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cargamos el script desde la raíz -->
+    <script src="../Js/main.js"></script>
+</body>
+</html>

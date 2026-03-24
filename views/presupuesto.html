@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto | EcoTech Solutions</title>
+    <!-- Salimos de la carpeta views para buscar los estilos en la raíz -->
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>EcoTech</strong> Solutions</div>
+            <ul>
+                <!-- Navegación fija: el Inicio está un nivel arriba -->
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Calcula tu Presupuesto al Instante</h2>
+            <p>Rellena los campos y el sistema calculará el valor de la pega automáticamente.</p>
+            
+            <form id="form-presupuesto">
+                <!-- Sección de validación obligatoria (Nombre, Apellidos, Teléfono, Email) -->
+                <fieldset>
+                    <legend>Datos de Contacto</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombre (Máx. 15 letras):</label>
+                        <input type="text" id="nombre" maxlength="15" required placeholder="Escribe solo letras">
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos (Máx. 40 letras):</label>
+                        <input type="text" id="apellidos" maxlength="40" required placeholder="Tus apellidos aquí">
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono (9 dígitos):</label>
+                        <input type="tel" id="telefono" pattern="[0-9]{9}" required placeholder="Ej: 912345678">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email de contacto:</label>
+                        <input type="email" id="email" required placeholder="correo@ejemplo.cl">
+                    </div>
+                </fieldset>
+
+                <!-- Sección de lógica de cálculo dinámico -->
+                <fieldset>
+                    <legend>Configuración del Servicio</legend>
+                    <div class="campo">
+                        <label for="producto">Seleccione el Servicio Principal:</label>
+                        <select id="producto">
+                            <option value="0">Elige una opción...</option>
+                            <option value="800">Optimización IT Energética (800€)</option>
+                            <option value="1500">Desarrollo Web Sostenible (1500€)</option>
+                            <option value="3500">Auditoría Verde Integral (3500€)</option>
+                            <option value="5000">Transformación Digital Eco (5000€)</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="plazo">Plazo estimado (Meses):</label>
+                        <input type="number" id="plazo" min="1" value="1">
+                        <small>*Si el proyecto dura más de 6 meses, se aplica un 10% de descuento automático.</small>
+                    </div>
+                    <div class="campo">
+                        <label>Servicios Adicionales:</label>
+                        <div style="margin-top: 10px;">
+                            <input type="checkbox" class="extra" value="100" style="width: auto;"> Soporte Premium 24/7 (+100€)<br>
+                            <input type="checkbox" class="extra" value="250" style="width: auto;"> Certificado de Carbono Neutral (+250€)<br>
+                            <input type="checkbox" class="extra" value="150" style="width: auto;"> Mantenimiento Mensual (+150€)
+                        </div>
+                    </div>
+                    
+                    <!-- Display del total que se actualiza mediante JavaScript -->
+                    <div class="total-display">
+                        Total Estimado: <span id="total">0,00</span>€
+                    </div>
+                </fieldset>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <input type="checkbox" id="privacidad" required style="width: auto;">
+                    <label for="privacidad">He leído y acepto la política de privacidad</label>
+                    <div style="margin-top: 20px;">
+                        <button type="submit">Enviar Solicitud</button>
+                        <button type="reset" onclick="document.getElementById('total').innerText='0,00'">Limpiar Formulario</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Redes Sociales</h3>
+                <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+            </div>
+            <div>
+                <h3>Dirección</h3>
+                <p>Calle de la Innovación 42, Madrid</p>
+            </div>
+            <div>
+                <h3>Información Legal</h3>
+                <a href="#">Aviso Legal</a> | <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cargamos la lógica desde la carpeta Js en la raíz -->
+    <script src="../Js/main.js"></script>
+</body>
+</html>
