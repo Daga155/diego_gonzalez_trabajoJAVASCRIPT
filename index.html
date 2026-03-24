@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTech Solutions | Inicio</title>
+    <!-- Los estilos están en la carpeta CSS al mismo nivel que este archivo -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><strong>EcoTech</strong> Solutions</div>
+            <ul>
+                <!-- Navegación fija: apuntamos a la carpeta 'views' para las otras páginas -->
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="views/galeria.html">Galería</a></li>
+                <li><a href="views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="views/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección 1: Hero con el mensaje de impacto -->
+        <section id="hero">
+            <h1>Liderando el cambio tecnológico verde</h1>
+            <p>Soluciones eficientes para un futuro más limpio y sostenible. Nos preocupamos de que tu huella digital no sea fome para el planeta.</p>
+        </section>
+
+        <!-- Sección 2: Servicios destacados -->
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="grid-servicios">
+                <article class="card">
+                    <h3>Consultoría Energética</h3>
+                    <p>Optimizamos tus recursos para que no gastes energía de más en tu infraestructura tecnológica.</p>
+                </article>
+                <article class="card">
+                    <h3>Desarrollo Web Eficiente</h3>
+                    <p>Creamos sitios rápidos, livianos y con un código filete que ahorra procesamiento.</p>
+                </article>
+                <article class="card">
+                    <h3>Migración Cloud Sostenible</h3>
+                    <p>Llevamos tu pega a la nube usando servidores alimentados por energías renovables.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección 3: Breve descripción sobre nosotros -->
+        <section id="nosotros">
+            <h2>Sobre EcoTech</h2>
+            <p>Somos un equipo apasionado por la tecnología y el medio ambiente. Aseguramos que la innovación y la ecología vayan siempre de la mano.</p>
+        </section>
+
+        <!-- Sección 4: Noticias cargadas dinámicamente vía AJAX/JSON -->
+        <section id="noticias-container">
+            <h2>Últimas Noticias</h2>
+            <div id="noticias-ajax">
+                <p>Aguanta un poco, estamos cargando las novedades al tiro...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Redes Sociales</h3>
+                <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+            </div>
+            <div>
+                <h3>Dirección</h3>
+                <p>Calle de la Innovación 42, Madrid</p>
+            </div>
+            <div>
+                <h3>Información Legal</h3>
+                <a href="#">Aviso Legal</a> | <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- El script principal está en la carpeta Js -->
+    <script src="Js/main.js"></script>
+</body>
+</html>
